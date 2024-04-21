@@ -242,6 +242,18 @@ MRPGameTitleTextPos = (-0.12, 0.2, 0.092)
 MRPInstructionsTextWordwrap = 32
 MRPInstructionsTextPos = (-0.12, 0.05, 0)
 
+#cogdominium/CogdoGqameRulesPanel.py
+CRPgameTitleText = 0.088
+CRPgameTitleTextPos = (-0.046, 0.2, 0.13)
+MRPgameTitleText = 0.10
+MRgameTitleTextPos = (-0.12, 0.2, 0.092)
+MRPplayButton = 0.040
+MRPinstructionsText = 0.05
+MRPinstructionsTextWordwrap = 32
+MRPinstructionsTextPos = (-0.12, 0.05, 0)
+CRPgameTitleText = 0.088
+CRPgameTitleTextPos = (-0.046, 0.2, 0.13)
+
 #Stuff for trolley metagame
 TravelGameBonusBeansSize = 0.65
 
