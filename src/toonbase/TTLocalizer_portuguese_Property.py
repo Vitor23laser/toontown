@@ -41,6 +41,9 @@ CSgiftTogglePos = (00.855, -0.10)
 CSgiftToggle = 0.07
 CSbackCatalogButton = 0.065
 
+#catalog/CatalogNametagItem.py
+NametagReverse = True
+
 #chat/TTChatInputSpeedChat.py
 CISCspeedChat = 0.048
 CISCtopLevelOverlap = 0.08
