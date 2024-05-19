@@ -295,6 +295,8 @@ DPpartyCountdownClockSecondPosY = -0.9
 PPGpartyStartButton = 0.065
 PPGinstructionsLabel = 0.065
 PPGcreatePartyListAndLabel = 0.06
+PPGactivitiesLabel = 0.06
+PPGminLeftLabel = 0.06
 
 #parties/JukeboxGui.py
 JGcurrentlyPlayingLabel = 0.07
