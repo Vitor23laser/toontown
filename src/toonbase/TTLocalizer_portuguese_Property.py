@@ -488,6 +488,7 @@ INclickToAttack = 0.75
 INpassButton = 0.032
 INrunButton = 0.045
 INdetailNameLabel = 1.0
+INfireButton = 0.05
 
 #toon/NPCForceAcknowledge.py
 NPCFimgLabel = 0.6
