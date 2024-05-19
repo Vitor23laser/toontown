@@ -240,6 +240,7 @@ DTGVotesToGoLabelTextScale = 0.07
 DTGUpLabelTextScale = 0.07
 DTGDownLabelTextScale = 0.07
 DTGRemainingVotesFrameTextScale = 0.6
+CStoonFrame = 0.0575
 
 #minigame/MinigameRulesPanel.py
 MRPGameTitleTextScale = 0.10
