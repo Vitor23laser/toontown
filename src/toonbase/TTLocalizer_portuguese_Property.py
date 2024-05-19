@@ -223,6 +223,7 @@ MATenterNameShop = 0.11
 MATclothesGUIshirt_scale = 0.06
 MATclothesGUIshirt_posL = 0.010
 MATclothesGUIshirt_posR = -0.014
+MATguiCancelButton = 0.08
 MATnextButtonScale = 0.07
 
 #makeatoon\ShuffleButton.py
