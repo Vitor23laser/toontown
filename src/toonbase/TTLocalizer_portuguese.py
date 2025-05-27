@@ -62,12 +62,12 @@ UnpaidNameTag = "Basico"
 # GM nametags
 GM_1 = "CONSELHO TOON"
 GM_2 = "TROPA TOON"
-GM_3 = "SOLDADO DA RESISTÊNCIA"
+GM_3 = "TOON DA RESISTÊNCIA"
 GM_4 = "GC"
 
 GM_NAMES = ("CONSELHO TOON",
-            "TOON TROOPER",
-            "RESISTANCE RANGER",
+            "TROPA TOON",
+            "TOON DA RESISTÊNCIA",
             "GC",
             )
 
@@ -109,7 +109,7 @@ lSellbotHQ = 'Quartel do Robô Vendedor'
 lGoofySpeedway = "Autódromo do Pateta"
 lOutdoorZone = "Bosque de Bolotas de Tico e Teco"
 lGolfZone = "Minigolfe de Tico e Teco"
-lPartyHood = "Terra do Festas"
+lPartyHood = "Terra das Festas"
 
 lGagShop = 'Loja de Piadas'
 lClothingShop = 'Loja de Roupas'
