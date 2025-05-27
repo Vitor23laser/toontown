@@ -1,18 +1,10 @@
-import string
-import time
 from toontown.toonbase.TTLocalizerEnglishProperty import *
 from toontown.catalog import CatalogAccessoryItemGlobals
 from otp.otpbase import OTPLocalizer as OL
-OL.SpeedChatStaticText = dict(OL.SpeedChatStaticTextToontown)
-OL.SpeedChatStaticText.update(OL.SpeedChatStaticTextCommon)
+OL.SpeedChatStaticText = OL.SpeedChatStaticTextToontown.copy()
+for key in OL.SpeedChatStaticTextCommon.iterkeys():
+    OL.SpeedChatStaticText[key] = OL.SpeedChatStaticTextCommon[key]
 
-# To make sure the language checker is working
-# DO NOT TRANSLATE THIS
-#ExtraKeySanityCheck = "Ignore me"
-
-# commit strings
-#commitmanString = "bugfix! I changed this"
-#commitmanSting2 = "another string!"
 commitmantst = "kptmptest - removable"
 
 InterfaceFont = 'phase_3/models/fonts/ImpressBT.ttf'
@@ -56,10 +48,10 @@ NametagLabel = " Nametag"
 
 UnpaidNameTag = "Basic"
 
-# GM nametags
+# GM 2011 nametags
 GM_1 = "TOON COUNCIL"
 GM_2 = "TOON TROOPER" # "TOON TROOP"
-GM_3 = "RESISTANCE RANGER" # "TOON RESISTANCE"
+GM_3 = "RESISTANCE RANGER" # Brazil = "TOON RESISTANCE"
 GM_4 = "GC"
 
 GM_NAMES = ("TOON COUNCIL",
@@ -170,10 +162,8 @@ ToontownCentral   = ("to",     "in",     lToontownCentral)
 TheBrrrgh         = ("to",     "in",     lTheBrrrgh)
 MinniesMelodyland = ("to",     "in",     lMinniesMelodyland)
 DaisyGardens      = ("to",     "in",     lDaisyGardens)
-ConstructionZone  = ("to the", "in the", "Construction Zone")
 OutdoorZone       = ("to",     "in",     lOutdoorZone)
 FunnyFarm         = ("to the", "in the", "Funny Farm")
-#GoofyStadium     = ("to",     "in",     "Goofy Stadium")
 GoofySpeedway     = ("to",     "in",     lGoofySpeedway)
 DonaldsDreamland  = ("to",     "in",     lDonaldsDreamland)
 BossbotHQ         = ("to",     "in",     "Bossbot HQ")
@@ -3932,7 +3922,6 @@ FADoorCodes_DEFEAT_FLUNKY_TOM = "Walk up to that Flunky to battle him!"
 FADoorCodes_TALK_TO_HQ_TOM = "Go get your reward from Toon Headquarters!"
 FADoorCodes_SUIT_APPROACHING = None  # no message, just refuse entry.
 FADoorCodes_BUILDING_TAKEOVER = "Watch out! There's a Cog in there!"
-#FADoorCodes_DISGUISE_INCOMPLETE = "You'll get caught going in there as a Toon! You need to complete your Cog Disguise first!\n\nBuild your Cog Disguise out of parts from the Factory."
 FADoorCodes_SB_DISGUISE_INCOMPLETE = "You'll get caught going in there as a Toon! You need to complete your Sellbot Disguise first!\n\nBuild your Sellbot Disguise out of parts from the Factory."
 FADoorCodes_CB_DISGUISE_INCOMPLETE = "You'll get caught going in there as a Toon! You need to complete your Cashbot Disguise first!\n\nBuild your Cashbot Disguise by doing ToonTasks in Donald's Dreamland."
 FADoorCodes_LB_DISGUISE_INCOMPLETE = "You'll get caught going in there as a Toon! You need to complete your Lawbot Disguise first!\n\nBuild your Lawbot Disguise by doing the ToonTasks after Donald's Dreamland."
@@ -10852,18 +10841,18 @@ startFireworksResponse = "Usage: startFireworksShow [\'num\']\n \
                                         %s - Party Summer \n \
                                         %s - 4th of July"
 
-FireworksValentinesBeginning = lToonHQ+": Happy ValenToons to all lovers!" # Brazil
-FireworksValentinesEnding = lToonHQ+": Hope you enjoyed the show!" # Brazil
-FireworksFebruary14Beginning = lToonHQ+": Happy ValenToons to all lovers!"
-FireworksFebruary14Ending = lToonHQ+": Hope you enjoyed the show!"
+#FireworksValentinesBeginning = lToonHQ+": Happy ValenToons to all lovers!" # Brazil
+#FireworksValentinesEnding = lToonHQ+": Hope you enjoyed the show!" # Brazil
+#FireworksFebruary14Beginning = lToonHQ+": Happy ValenToons to all lovers!"
+#FireworksFebruary14Ending = lToonHQ+": Hope you enjoyed the show!"
 FireworksJuly4Beginning = lToonHQ+": Welcome to summer fireworks! Enjoy the show!"
 FireworksJuly4Ending = lToonHQ+": Hope you enjoyed the show! Have a great summer!"
 FireworksJuly14Beginning = lToonHQ+": July 14 fireworks! Enjoy the fireworks show!"
 FireworksJuly14Ending = lToonHQ+": Hope you enjoyed the show!"
-FireworksOctober31Beginning = lToonHQ+": Happy Halloween!"
-FireworksOctober31Ending = lToonHQ+": Hope you enjoyed the show!"
-FireworksNovember19Beginning = lToonHQ+": Happy Birthday! Toontown turns 1 year old" # Germany
-FireworksNovember19Ending = lToonHQ+": Hope you enjoyed the show!" # Germany
+#FireworksOctober31Beginning = lToonHQ+": Happy Halloween!"
+#FireworksOctober31Ending = lToonHQ+": Hope you enjoyed the show!"
+#FireworksNovember19Beginning = lToonHQ+": Happy Birthday! Toontown turns 1 year old" # Germany
+#FireworksNovember19Ending = lToonHQ+": Hope you enjoyed the show!" # Germany
 FireworksNewYearsEveBeginning = lToonHQ+": Happy New Year! Enjoy the fireworks show!"
 FireworksNewYearsEveEnding = lToonHQ+": Hope you enjoyed the show! Happy New Year!"
 FireworksComboBeginning = lToonHQ+": Enjoy lots of Laffs with Toon fireworks!"
@@ -11247,171 +11236,6 @@ FishSpeciesNames = {
     34 : ( "Devil Ray",
            ),
     }
-
-FishFirstNames = (
-    "",
-    "Angel",
-    "Artic",
-    "Baby",
-    "Bermuda",
-    "Big",
-    "Brooke",
-    "Bubbles",
-    "Buster",
-    "Candy",
-    "Captain",
-    "Chip",
-    "Chub",
-    "Coral",
-    "Doctor",
-    "Dusty",
-    "Emperor",
-    "Fangs",
-    "Fat",
-    "Fishy",
-    "Flipper",
-    "Flounder",
-    "Freckles",
-    "Honey",
-    "Jack",
-    "King",
-    "Little",
-    "Marlin",
-    "Miss",
-    "Mister",
-    "Peaches",
-    "Pinky",
-    "Prince",
-    "Princess",
-    "Professor",
-    "Puffy",
-    "Queen",
-    "Rainbow",
-    "Ray",
-    "Rosy",
-    "Rusty",
-    "Salty",
-    "Sam",
-    "Sandy",
-    "Scales",
-    "Sharky",
-    "Sir",
-    "Skippy",
-    "Slipper",
-    "Snapper",
-    "Speck",
-    "Spike",
-    "Spotty",
-    "Star",
-    "Sugar",
-    "Super",
-    "Tiger",
-    "Tiny",
-    "Whiskers",
-    )
-
-FishLastPrefixNames = (
-    "",
-    "Beach",
-    "Black",
-    "Blue",
-    "Boar",
-    "Bull",
-    "Cat",
-    "Deep",
-    "Double",
-    "East",
-    "Fancy",
-    "Flaky",
-    "Flat",
-    "Fresh",
-    "Giant",
-    "Gold",
-    "Golden",
-    "Gray",
-    "Green",
-    "Hog",
-    "Jabber",
-    "Jelly",
-    "Lady",
-    "Leather",
-    "Lemon",
-    "Long",
-    "Northern",
-    "Ocean",
-    "Octo",
-    "Oil",
-    "Pearl",
-    "Puff",
-    "Red",
-    "Ribbon",
-    "River",
-    "Rock",
-    "Ruby",
-    "Rudder",
-    "Salt",
-    "Sea",
-    "Silver",
-    "Snorkel",
-    "Sole",
-    "Southern",
-    "Spikey",
-    "Surf",
-    "Sword",
-    "Tiger",
-    "Triple",
-    "Tropical",
-    "Tuna",
-    "Wave",
-    "Weak",
-    "West",
-    "White",
-    "Yellow",
-    )
-
-FishLastSuffixNames = (
-    "",
-    "ball",
-    "bass",
-    "belly",
-    "bug",
-    "burglar",
-    "butter",
-    "claw",
-    "cobbler",
-    "crab",
-    "croaker",
-    "drum",
-    "fin",
-    "fish",
-    "flapper",
-    "flipper",
-    "ghost",
-    "grunt",
-    "head",
-    "jacket",
-    "jumper",
-    "mackerel",
-    "moon",
-    "mouth",
-    "mullet",
-    "neck",
-    "nose",
-    "perch",
-    "roughy",
-    "runner",
-    "sail",
-    "shark",
-    "shell",
-    "silk",
-    "slime",
-    "snapper",
-    "stink",
-    "tail",
-    "toad",
-    "trout",
-    "water",
-    )
 
 CogPartNames = (
     "Upper Left Leg", "Lower Left Leg", "Left Foot",
@@ -12691,25 +12515,6 @@ RegularCheckers = "Checkers."
 RegularCheckersGameOf = " has just won a game of "
 RegularCheckersYouWon = "You just won a game of Checkers!"
 
-#DistributedFindFour.py
-FindFourGetUpButton = "Get Up"
-FindFourStartButton = "Start Game"
-FindFourQuitButton = "Quit Game"
-FindFourIts = "It's "
-
-FindFourYourTurn = "Your Turn"
-FindFourYellowTurn = "Yellow's Turn"
-FindFourRedTurn = "Red's Turn"
-
-FindFourColorY = "You are Yellow"
-FindFourColorR = "You are Red"
-FindFourObserver = "You are Observing"
-
-FindFourYouWon = "You just won a game of Find Four!"
-FindFourTie = "This Find Four game has resulted in a Tie!"
-FindFour = "Find Four."
-FindFourGameOf = " has just won a game of "
-
 MailNotifyNewItems = "You've got mail!"
 MailNewMailButton = "Mail"
 MailSimpleMail = "Note"
@@ -12818,9 +12623,8 @@ HolidayNamesInCalendar = {
    98: ("Double Bean Days - Fishing", ""),
    99: ("Jellybean Week", "Celebrate Jellybean Week with double Jellybean rewards!"),
    101: ("Top Toons New Year's Day Marathon", "Chances to win every hour! See the What's New Blog for details!"),
-   #105: ("Ides of March", "The Ides of March are here!"),
+   #105: ("Ides of March", "The Ides of March are here!"), #2011
    105: ("Toons go GREEN!", "Toons make a green scene at Green Bean Jeans on Oak Street in Daisy Gardens!"),
-   108: ("Operation: Lawbots Lose", "Lawbot HQ is open to everyone. Let's go fight the CJ!"),
 
     }
 
@@ -12847,34 +12651,6 @@ CogdoCraneGameTitle = "Vend-A-Stomper"
 CogdoCraneGameInstructions = ("The COGS are using a coin-operated machine to destroy laff barrels. "
                               "Use the cranes to pick up and throw money bags, in order to prevent "
                               "barrel destruction!")
-
-
-# Cogdo Maze Game
-# No longer in use.
-"""
-CogdoMazeGameTitle = "Moving & Shaking Dept."
-CogdoMazeGameInstructions = "The big Mover & Shaker Cogs have the code to open the door. Defeat them with your water balloons in order to get it!"
-CogdoMazeIntroMovieDialogue = (("This should give you Toons a shiver! We're powering our offices with your Laff, and you're powerless to stop us!",
-                                "This will make you Toons quake! We're destroying barrels of your Laff, and you cannot stop us!",
-                                "This may come as an aftershock, but we're crushing barrels of Toon Laff in our %s, and there's nothing you can do about it!" % CogdoStomperName),
-                                ("Don't get rattled, Toons! Fill your water balloons, splash the BIG Cogs, and retrieve the PASS CODE that opens the exit! Good luck from the Toon Resistance!",
-                                "Are you ready to rumble, Toons? Go to the water coolers and fill up balloons to throw at Cogs. Hit the BIG Cogs to get the pass code for the exit! Toon Resistance out!",
-                                "Want some good vibrations? Fill your balloons at the water coolers, splash the BIG Movers & Shakers, complete the PASS CODE, and find the way out! Good luck, Toons!"),
-                                ("Hmph! I'm a Silver Sprocket Award winner, I don't need this!",
-                                "You're on shaky ground, Toons!",
-                                "Before you know it, you'll all be trembling!"),
-                                )
-CogdoMazeGameDoorOpens = "The Pass Code opened the Exit!\nGet there before it's too late!"
-CogdoMazeGameLocalToonFoundExit = "This Exit will open when\nyou get the Pass Code from the Big Cogs!"
-CogdoMazeGameWaitingForToons = "Waiting for %d other Toons..."
-CogdoMazeGameTimeOut = "Oh No! Time ran out!\nYou lost your Memos!"
-CogdoMazeGameBossGuiTitle = "Pass Code:"
-CogdoMazeFindHint = "Find a Water Cooler!"
-CogdoMazeThrowHint = "Press 'Ctrl' to throw your water balloon!"
-CogdoMazeSquashHint = "Careful! Falling objects pop your balloon!"
-CogdoMazeBossHint = "Big Cogs take %i hits to take them down!"
-CogdoMazeMinionHint = "Minions will drop bonus Memos!"
-"""
 
 # Cogdo Maze Game
 CogdoMazeGameTitle = "Mover & Shaker\nField Office"
@@ -12959,7 +12735,3 @@ InteractivePropTrackBonusTerms = {
 }
 
 PlayingCardUnknown = "Card Name is unknown"
-
-# No longer in use.
-#AllTrickOrTreatFounded = "Trick or Treat"
-#TrickOrTreatScavengerHuntCompleted = "Trick or Treat"
